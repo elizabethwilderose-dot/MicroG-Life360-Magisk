@@ -1,0 +1,31 @@
+# Build output
+dist/
+*.zip
+
+# Never commit the microG APK — it is pulled from your own device at build time
+*.apk
+
+# The whitelist is generated from YOUR installed microG build. Committing one would
+# let somebody install a list belonging to a different build — the exact hazard the
+# docs warn about. A read-only reference copy lives in docs/ instead.
+module/system/etc/permissions/*.xml
+
+# Local diagnostic captures — these can contain coordinates, account names and device IDs
+*.log
+logcat*.txt
+dumpsys*.txt
+*.png
+ui*.xml
+
+# Java / Android build artifacts (extras/)
+*.class
+*.dex
+build/
+.gradle/
+local.properties
+
+# Editor / OS noise
+.idea/
+.vscode/
+.DS_Store
+*.swp
