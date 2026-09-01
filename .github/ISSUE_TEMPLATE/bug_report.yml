@@ -1,0 +1,66 @@
+name: Bug report
+description: Something in the scripts, module or documentation is wrong
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before you paste anything:** strip GPS coordinates, place names, account names
+        and email addresses, `androidId` / `securityToken`, device serials, IMEI and
+        Wi-Fi SSIDs. Replace with `REDACTED`.
+
+        If you are reporting how this behaved on a device rather than a defect in the
+        code or docs, please use the **Device report** template instead.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: What is affected
+      options:
+        - scripts/gen-privapp-permissions.sh
+        - scripts/build-module.sh
+        - scripts/verify.sh
+        - module (module.prop / customize.sh / whitelist)
+        - documentation
+        - extras/xposed-gmsver
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Ran ./scripts/...
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output (redacted)
+      render: text
+
+  - type: input
+    id: env
+    attributes:
+      label: Device, ROM, Android version, microG and Magisk versions
+    validations:
+      required: true

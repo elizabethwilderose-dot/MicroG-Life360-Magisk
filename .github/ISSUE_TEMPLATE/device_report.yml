@@ -1,0 +1,83 @@
+name: Device report
+description: Report whether this worked (or did not) on your device — the most useful contribution
+title: "[Device] "
+labels: ["device-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. This project is verified on exactly one device, so every report widens
+        that meaningfully — **including failures**, which are just as useful.
+
+        **Before you paste anything:** Android diagnostic output contains personal data.
+        Remove GPS coordinates, place names, account names and email addresses,
+        `androidId` / `securityToken`, device serials and IMEI, and Wi-Fi SSIDs.
+        Replace them with `REDACTED`. `scripts/verify.sh` is written not to print
+        coordinates, but please still read what you paste.
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Outcome
+      options:
+        - Worked — network provider registered and location works
+        - Partly worked — provider registered but no location fix
+        - Did not work — no change
+        - Broke something (boot loop, microG stopped working)
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device and codename
+      placeholder: "e.g. Xiaomi Redmi Note 7 (lavender)"
+    validations:
+      required: true
+
+  - type: input
+    id: rom
+    attributes:
+      label: ROM and version
+      placeholder: "e.g. LineageOS 22.2-20250830-UNOFFICIAL"
+    validations:
+      required: true
+
+  - type: input
+    id: android
+    attributes:
+      label: Android version, SDK, build type
+      description: "adb shell getprop ro.build.version.sdk / ro.build.type"
+      placeholder: "e.g. Android 15, SDK 35, user"
+    validations:
+      required: true
+
+  - type: input
+    id: versions
+    attributes:
+      label: microG and Magisk versions
+      placeholder: "e.g. microG 0.3.16.252432, Magisk 30.7"
+    validations:
+      required: true
+
+  - type: input
+    id: enforce
+    attributes:
+      label: ro.control_privapp_permissions
+      placeholder: "enforce / log / unset"
+    validations:
+      required: true
+
+  - type: textarea
+    id: verify
+    attributes:
+      label: Output of ./scripts/verify.sh
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Deviations from the documented steps, surprises, extra steps needed.

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  REFERENCE ONLY — DO NOT INSTALL THIS FILE.
+
+  This is what scripts/gen-privapp-permissions.sh produced for one specific build:
+
+      microG GmsCore 0.3.16.252432
+      LineageOS 22.2 / Android 15 (SDK 35)
+
+  It is included so you can see the expected shape and sanity-check your own output.
+  Generate your own instead:
+
+      ./scripts/gen-privapp-permissions.sh
+
+  Using a list from a different microG build is unsafe. Under
+  ro.control_privapp_permissions=enforce a missing entry means the permission is
+  denied, and on userdebug builds it can stop the device from booting.
+
+  The entry that makes network location possible is INSTALL_LOCATION_PROVIDER.
+-->
+<permissions>
+    <privapp-permissions package="com.google.android.gms">
+        <permission name="android.permission.ACCESS_ADSERVICES_AD_ID"/>
+        <permission name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION"/>
+        <permission name="android.permission.ACCESS_ADSERVICES_TOPICS"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+        <permission name="android.permission.ACCESS_COARSE_LOCATION"/>
+        <permission name="android.permission.ACCESS_FINE_LOCATION"/>
+        <permission name="android.permission.ACCESS_NETWORK_STATE"/>
+        <permission name="android.permission.ACCESS_WIFI_STATE"/>
+        <permission name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+        <permission name="android.permission.BLUETOOTH"/>
+        <permission name="android.permission.BLUETOOTH_ADMIN"/>
+        <permission name="android.permission.BLUETOOTH_ADVERTISE"/>
+        <permission name="android.permission.BLUETOOTH_CONNECT"/>
+        <permission name="android.permission.BLUETOOTH_SCAN"/>
+        <permission name="android.permission.BODY_SENSORS"/>
+        <permission name="android.permission.BODY_SENSORS_BACKGROUND"/>
+        <permission name="android.permission.CAMERA"/>
+        <permission name="android.permission.CHANGE_DEVICE_IDLE_TEMP_WHITELIST"/>
+        <permission name="android.permission.CHANGE_WIFI_STATE"/>
+        <permission name="android.permission.DUMP"/>
+        <permission name="android.permission.FAKE_PACKAGE_SIGNATURE"/>
+        <permission name="android.permission.FOREGROUND_SERVICE"/>
+        <permission name="android.permission.GET_ACCOUNTS"/>
+        <permission name="android.permission.INSTALL_LOCATION_PROVIDER"/>
+        <permission name="android.permission.INTERACT_ACROSS_PROFILES"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.INTERNET"/>
+        <permission name="android.permission.LOCATION_HARDWARE"/>
+        <permission name="android.permission.MANAGE_ACCOUNTS"/>
+        <permission name="android.permission.MANAGE_USB"/>
+        <permission name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.NETWORK_SCAN"/>
+        <permission name="android.permission.NFC"/>
+        <permission name="android.permission.POST_NOTIFICATIONS"/>
+        <permission name="android.permission.PROVIDE_DEFAULT_ENABLED_CREDENTIAL_SERVICE"/>
+        <permission name="android.permission.PROVIDE_REMOTE_CREDENTIALS"/>
+        <permission name="android.permission.READ_CONTACTS"/>
+        <permission name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.READ_MEDIA_AUDIO"/>
+        <permission name="android.permission.READ_MEDIA_IMAGES"/>
+        <permission name="android.permission.READ_MEDIA_VIDEO"/>
+        <permission name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
+        <permission name="android.permission.READ_PHONE_STATE"/>
+        <permission name="android.permission.READ_SYNC_SETTINGS"/>
+        <permission name="android.permission.READ_SYNC_STATS"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <permission name="android.permission.RECEIVE_SMS"/>
+        <permission name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <permission name="android.permission.SYSTEM_ALERT_WINDOW"/>
+        <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
+        <permission name="android.permission.UPDATE_DEVICE_STATS"/>
+        <permission name="android.permission.USE_BIOMETRIC"/>
+        <permission name="android.permission.USE_CREDENTIALS"/>
+        <permission name="android.permission.USE_FINGERPRINT"/>
+        <permission name="android.permission.WAKE_LOCK"/>
+        <permission name="android.permission.WATCH_APPOPS"/>
+        <permission name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+        <permission name="android.permission.WRITE_SYNC_SETTINGS"/>
+    </privapp-permissions>
+</permissions>
